@@ -8,7 +8,6 @@ const colecionador = {
   contato: "joao@email.com"
   
   adicionarTipo:function(propriedade,tipo){
-  
     this[propriedade].push(tipo)
   }
  }

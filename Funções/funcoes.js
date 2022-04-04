@@ -20,7 +20,7 @@ imprimeTexto(soma());
 function soma(){
         return 2 + 2; // deixamos sempre na ultima linha
 }
-c
+
 //onst notas = [10, 6.5, 8, 7]
 
 // console.log(`Média do aluno ${mediaSala(notas)}`)
