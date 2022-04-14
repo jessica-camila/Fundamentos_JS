@@ -10,3 +10,10 @@ const listaDeTeclas = document.querySelectorAll('.tecla');
 for (let i=0;i<27;i++){
   listaDeTeclas[i].onclick = tocaSomTic;
 }
+
+// let contador = 0;
+
+// while (contador<27) {
+//   listaDeTeclas[contador].onclick = tocaSomTic;
+//   contador = contador + 1;
+// }
