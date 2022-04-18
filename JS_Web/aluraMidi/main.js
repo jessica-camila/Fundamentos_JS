@@ -15,8 +15,35 @@ function tocaSom (idElementoAudio) {
 
 const listaDeTeclas = document.querySelectorAll('.tecla');
 
+for (let i=0;i<listaDeTeclas.length;i++) {
+  
+  const tecla = listaDeTeclas[i];
+  const instrumento = tecla.classList[1];
+  const idAudio = `#som_${instrumento}`;
+  
+  tecla.onclick = function () {
+    tocaSom(idAudio);
+
+  }
+
+  tecla.onkeydown = function (evento) {
+    
+    // console.log(evento.code == 'Space')
+    
+    if (evento.code === 'Space' || evento.code === 'Enter') {
+      tecla.classList.add('ativa');  
+    }
+  
+  }
+
+  tecla.onkeyup = function () {
+    tecla.classList.remove('ativa');  
+  } 
+
+}
+
 //let contador = 0;
-   // funções anonimas ... obs se colocar () navegador "bloqueia" audio
+   // funções anonimas ... obs se colocar () navegador "bloqueia" audio, por isso usar function () { }
   // listaDeTeclas[contador].onclick = tocaSom('#som_tecla_pom');
 
 // while (contador<listaDeTeclas.length) {
@@ -30,29 +57,3 @@ const listaDeTeclas = document.querySelectorAll('.tecla');
 //   }
 //   contador = contador + 1;
 // }
-
-for (let i=0;i<listaDeTeclas.length;i++) {
-  
-  const tecla = listaDeTeclas[i];
-  const instrumento = tecla.classList[1];
-  const idAudio = `#som_${instrumento}`;
-  
-  tecla.onclick = function () {
-    tocaSom(idAudio);
-  }
-
-  tecla.onkeydown = function (evento) {
-    
-    console.log(evento.code == 'Space')
-    
-    if (evento.code === 'Space' || evento.code === 'Enter') {
-      tecla.classList.add('ativa');  
-    }
-  
-  }
-
-  tecla.onkeyup = function () {
-    tecla.classList.remove('ativa');  
-  } 
-
-}
