@@ -4,11 +4,9 @@
 
 .formulario__legenda {
     font-size: var(--fonte-tamanho-formulario-fieldset);
-    color:blue;
+
     margin-bottom: 1rem;
 }
-
-/*  ********* inputs **********    */
 
 .input-container {
     font-weight: var(--fonte-peso-input);
@@ -75,8 +73,6 @@
     margin-top: 0.5rem;
     padding-left: 0.5rem;
 }
-
-/* *********  area de texto **************** */
 
 .textarea {
     box-sizing: border-box;
